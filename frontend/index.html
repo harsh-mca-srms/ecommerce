@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Marvel Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7fb;
+  --text:#0f172a;
+  --muted:#667085;
+  --card:#ffffff;
+  --brand:#e62429;
+  --brand-dark:#b91c1c;
+  --accent:#0ea5e9;
+  --line:#e5e7eb;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Montserrat',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* Header */
+header{
+  background:white;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 60px;
+  font-size:13px;
+  color:var(--muted);
+  background:#fff5f5;
+}
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 60px;
+}
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  font-weight:700;
+  color:var(--brand);
+}
+.nav-links a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+}
+.nav-actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.search{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:8px 16px;
+  background:white;
+}
+.search input{
+  border:none;
+  outline:none;
+  width:220px;
+}
+.cart-btn{
+  background:var(--brand);
+  color:white;
+  padding:8px 14px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:30px;
+  padding:60px;
+  align-items:center;
+  background:linear-gradient(120deg,#fff5f5,#f0f9ff);
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:50px;
+  margin-bottom:16px;
+}
+.hero p{color:var(--muted);margin-bottom:24px;font-size:18px;}
+.hero .btn{
+  padding:12px 20px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+.hero .btn.primary{background:var(--brand);color:white;}
+.hero .btn.secondary{background:white;border:1px solid var(--line);margin-left:10px;}
+.hero-card{
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+.hero-card img{width:100%;border-radius:12px;}
+
+/* Sections */
+.section{padding:50px 60px;}
+.section h2{font-size:28px;margin-bottom:20px;}
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:16px;
+}
+.cat{
+  background:white;
+  padding:18px;
+  border-radius:12px;
+  text-align:center;
+  border:1px solid var(--line);
+  font-weight:600;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.product{
+  background:white;
+  border-radius:12px;
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.2s;
+}
+.product:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,0.08);}
+.product img{
+  width:100%;
+  height:180px;
+  object-fit:contain;
+  background:#f9fafb;
+}
+.product .info{padding:16px;}
+.product h3{font-size:16px;margin-bottom:8px;}
+.price{color:var(--brand);font-weight:700;margin-bottom:10px;}
+.product button{
+  width:100%;
+  padding:10px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* Footer */
+footer{
+  padding:30px 60px;
+  border-top:1px solid var(--line);
+  background:white;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding:40px 24px;text-align:center;}
+  .navbar,.topbar,.section,footer{padding:20px 24px;}
+  .search input{width:120px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div>Free shipping on orders above ₹1500</div>
+    <div>Customer Support: +91 90000 12345</div>
+  </div>
+  <div class="navbar">
+    <div class="logo">Harsh Marvel Shop</div>
+    <div class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#featured">Featured</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <div class="search">
+        <span>Search</span>
+        <input type="text" placeholder="Search toys...">
+      </div>
+      <button class="cart-btn">Cart (0)</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Marvel Toys & Hero Accessories</h1>
+    <p>Discover Iron Man suits, Thor hammer replicas, Hawkeye bows, Wolverine claws, and more. Perfect for kids, collectors, and fans of all ages.</p>
+    <button class="btn primary">Shop Now</button>
+    <button class="btn secondary">View Collections</button>
+  </div>
+  <div class="hero-card">
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23fff5f5'/><circle cx='300' cy='200' r='120' fill='%23e62429'/><circle cx='300' cy='200' r='60' fill='%23f5c542'/><text x='50%25' y='85%25' font-size='26' text-anchor='middle' fill='%230f172a'>Iron Man Set</text></svg>" alt="Iron Man Set">
+  </div>
+</section>
+
+<section id="categories" class="section">
+  <h2>Shop by Hero</h2>
+  <div class="categories">
+    <div class="cat">Iron Man</div>
+    <div class="cat">Captain America</div>
+    <div class="cat">Spider-Man</div>
+    <div class="cat">Thor</div>
+    <div class="cat">Hawkeye</div>
+    <div class="cat">Wolverine</div>
+  </div>
+</section>
+
+<section id="shop" class="section">
+  <h2>Top Picks</h2>
+  <div class="products">
+    <div class="product">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23f9fafb'/><rect x='200' y='80' width='200' height='220' rx='20' fill='%23e62429'/><circle cx='300' cy='180' r='40' fill='%23f5c542'/><text x='50%25' y='85%25' font-size='22' text-anchor='middle' fill='%230f172a'>Iron Man Suit</text></svg>" alt="Iron Man Suit">
+      <div class="info">
+        <h3>Iron Man Armor Replica</h3>
+        <div class="price">₹29,999</div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23f9fafb'/><rect x='210' y='120' width='180' height='120' rx='12' fill='%23aeb5bf'/><rect x='285' y='240' width='30' height='120' fill='%238b5e3c'/><text x='50%25' y='85%25' font-size='22' text-anchor='middle' fill='%230f172a'>Thor Hammer</text></svg>" alt="Thor Hammer">
+      <div class="info">
+        <h3>Thor Hammer Replica</h3>
+        <div class="price">₹3,499</div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23f9fafb'/><path d='M200 140 Q150 220 200 300' stroke='%23f5c542' stroke-width='16' fill='none'/><line x1='200' y1='140' x2='420' y2='220' stroke='%230ea5e9' stroke-width='8'/><line x1='420' y1='220' x2='200' y2='300' stroke='%230ea5e9' stroke-width='8'/><text x='50%25' y='85%25' font-size='22' text-anchor='middle' fill='%230f172a'>Hawkeye Bow</text></svg>" alt="Hawkeye Bow">
+      <div class="info">
+        <h3>Hawkeye Bow Toy</h3>
+        <div class="price">₹2,499</div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23f9fafb'/><rect x='220' y='240' width='160' height='70' rx='20' fill='%23f5c542'/><rect x='250' y='100' width='20' height='160' fill='%23aeb5bf'/><rect x='290' y='100' width='20' height='160' fill='%23aeb5bf'/><rect x='330' y='100' width='20' height='160' fill='%23aeb5bf'/><text x='50%25' y='85%25' font-size='22' text-anchor='middle' fill='%230f172a'>Wolverine Claws</text></svg>" alt="Wolverine Claws">
+      <div class="info">
+        <h3>Wolverine Claws</h3>
+        <div class="price">₹2,199</div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="featured" class="section">
+  <h2>Featured Collection</h2>
+  <div class="products">
+    <div class="product">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23f9fafb'/><rect x='180' y='120' width='240' height='160' rx='12' fill='%230ea5e9'/><text x='50%25' y='85%25' font-size='22' text-anchor='middle' fill='%230f172a'>Avengers Bundle</text></svg>" alt="Avengers Bundle">
+      <div class="info">
+        <h3>Avengers Action Bundle</h3>
+        <div class="price">₹4,999</div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23f9fafb'/><circle cx='300' cy='200' r='90' fill='%23e62429'/><text x='50%25' y='85%25' font-size='22' text-anchor='middle' fill='%230f172a'>Spider-Man Kit</text></svg>" alt="Spider-Man Kit">
+      <div class="info">
+        <h3>Spider-Man Web Kit</h3>
+        <div class="price">₹2,999</div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="product">
+      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23f9fafb'/><rect x='210' y='120' width='180' height='120' rx='12' fill='%23aeb5bf'/><rect x='285' y='240' width='30' height='120' fill='%238b5e3c'/><text x='50%25' y='85%25' font-size='22' text-anchor='middle' fill='%230f172a'>Thor Hammer</text></svg>" alt="Thor Hammer">
+      <div class="info">
+        <h3>Thor Lightning Hammer</h3>
+        <div class="price">₹3,499</div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div>© 2026 Harsh Marvel Shop</div>
+  <div>Help Desk: support@harshmarvelshop.example</div>
+</footer>
+
+</body>
+</html>
