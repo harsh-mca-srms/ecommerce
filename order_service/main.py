@@ -1,7 +1,9 @@
 from fastapi import FastAPI
+from prometheus_fastapi_instrumentator import Instrumentator
 import requests
 
 app = FastAPI()
+Instrumentator().instrument(app).expose(app)
 
 orders = {}
 
