@@ -94,3 +94,20 @@ Not included (for now):
 ## Author
 
 Harsh
+
+<img width="1847" height="1018" alt="Screenshot from 2026-02-16 14-11-38" src="https://github.com/user-attachments/assets/fafbf6f8-7d7b-42be-9995-6438dd008d85" />
+
+
+<img width="1847" height="1018" alt="Screenshot from 2026-02-17 16-06-49" src="https://github.com/user-attachments/assets/82b9ec94-acb7-4859-8d66-8e10b9d45284" />
+
+
+<img width="1443" height="448" alt="Screenshot from 2026-02-17 17-18-02" src="https://github.com/user-attachments/assets/5d462dee-6e3f-4d94-b347-fd1a0d061db5" />
+
+
+<img width="1855" height="1011" alt="Screenshot from 2026-02-17 18-33-30" src="https://github.com/user-attachments/assets/40865865-4129-4e10-ad01-17afbda67e79" />
+
+
+<img width="1855" height="1011" alt="Screenshot from 2026-02-17 18-34-59" src="https://github.com/user-attachments/assets/04f485c5-ae38-433a-a49b-eb82c1e4844d" />
+
+
+
